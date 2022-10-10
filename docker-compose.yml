@@ -20,7 +20,7 @@ services:
       - POSTGRES_PASSWORD=cj;6rmp4xj/6
 
   judge-server:
-    image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/judge_server
+    image: alankingdom/judge_server
     container_name: judge-server
     restart: always
     read_only: true
@@ -44,7 +44,7 @@ services:
       # - judger_debug=1
   
   oj-backend:
-    image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/oj_backend
+    image: alankingdom/oj_backend
     container_name: oj-backend
     restart: always
     depends_on:
