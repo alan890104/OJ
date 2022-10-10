@@ -17,7 +17,7 @@ services:
     environment:
       - POSTGRES_DB=onlinejudge
       - POSTGRES_USER=onlinejudge
-      - POSTGRES_PASSWORD=onlinejudge
+      - POSTGRES_PASSWORD=cj;6rmp4xj/6
 
   judge-server:
     image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/judge_server
@@ -40,7 +40,7 @@ services:
     environment:
       - SERVICE_URL=http://judge-server:8080
       - BACKEND_URL=http://oj-backend:8000/api/judge_server_heartbeat/
-      - TOKEN=CHANGE_THIS
+      - TOKEN=vm6m4xjp6
       # - judger_debug=1
   
   oj-backend:
@@ -56,8 +56,8 @@ services:
     environment:
       - POSTGRES_DB=onlinejudge
       - POSTGRES_USER=onlinejudge
-      - POSTGRES_PASSWORD=onlinejudge
-      - JUDGE_SERVER_TOKEN=CHANGE_THIS
+      - POSTGRES_PASSWORD=cj;6rmp4xj/6
+      - JUDGE_SERVER_TOKEN=vm6m4xjp6
       # - FORCE_HTTPS=1
       # - STATIC_CDN_HOST=cdn.oj.com
     ports:
